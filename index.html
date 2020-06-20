@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Valentina Morato Garcés</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poiret+One&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,700;1,200;1,300;1,400;1,700&display=swap"
+    rel="stylesheet">
+  <link rel="apple-touch-icon" sizes="180x180" href="imagenes/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="imagenes/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="imagenes/favicon-16x16.png">
+  <link rel="manifest" href="imagenes/site.webmanifest">
+  <link rel="mask-icon" href="imagenes/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+
+  <link rel="stylesheet" href="./index.css">
+</head>
+
+<body>
+  <header>
+    <i class="icon-menu burger-button" id="burger-menu"></i>
+    <nav class="menu">
+      <ol>
+        <li>
+          <a href="#aboutme">Sobre mi.</a>
+        </li>
+        <li>
+          <a href="#experience">Experiencia.</a>
+        </li>
+        <li>
+          <a href="./portafolio/index.html">Portafolio.</a>
+        </li>
+        <li>
+          <a href="#contacto">Contáctame.</a>
+        </li>
+      </ol>
+    </nav>
+  </header>
+
+  <section id="aboutme" class="header-section">
+    <div class="title-section">
+      <img class="profile-image" src="images/profilephoto.jpg" />
+      <div class="header-info">
+        <h1>Valentina Morato Garcés</h1>
+        <h2>Chemical Engineer</h2>
+        <h2>Front-end developer</h2>
+      </div>
+    </div>
+    <div class="description">
+      <ul>
+        <li>
+          <span>2016: Me gradué de Ing Química y ejercí mi carrera hasta 2018. 👩‍🎓</span>
+        </li>
+        <li>
+          <span>2018 empecé a aprender sobre programación, especificamente desarrollo front-end, creando aplicaciones y
+            páginas web por medio de plataformas como Platzi y Codeacademy. 💻📝</span>
+        </li>
+      </ul>
+      <span>
+        Esta decisión la tomé con el fin de ampliar a futuro mis oportunidades
+        laborales 🔑 y en algún momento desarrollar mis ideas 💡 que combinen ambos mundos, mi carrera y la tecnología!
+        😊
+      </span>
+    </div>
+  </section>
+
+  <section class="experience" id="experience">
+    <div class="item-article">
+      <article>
+        <h2>Como Ingeniera Química</h2>
+        <p>Dos años de experiencia en el área I+D del laboratorio.</p>
+        <p>Allí evaluaé la calidad de las materias primas y producto en línea de producción mediante pruebas
+          fisicocerámicas y estudiando su reología.
+          Tambien estudié diferentes materiales y evalué su possible inclusién al proceso como materias primas o como
+          aditivos.</p>
+        <p>Fui brigadista de la empresa ⛑️</p>
+      </article>
+      <article>
+        <h2>Como Desarrolladora Front-end</h2>
+        <p>Freelance con Crowdswap: Modifique la página web estatica y responsive, usando React con Gatsby.</p>
+        <p>Freelance con Inlads: Desarrollo app mobil hibrida para android, ios y web. Desarrollo web de dashboard para
+          el
+          manejo de datos de la app. (Ionic framework/Angular).</p>
+      </article>
+    </div>
+    <div class="resume">
+      <p>Más sobre mi hoja de vida:</p>
+      <div>
+        <a
+          download target="_blank"
+          href="https://drive.google.com/file/d/1jhzE12hQWiD8BpC7BdF-u4S59GpdCKKk/view?usp=sharing"><span>Español</span>
+        </a>
+        <a
+          download target="_blank"
+          href="https://drive.google.com/file/d/1RnEoXr__6xmAv_GhtfG5rulLiVJckzCW/view?usp=sharing"><span>Inglés</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact" id="contacto">
+    <img class="img-mail" src="./images/correo.png" alt="">
+    <form class="form-email">
+      <div>
+        <h3>¿Quieres ponerte en contacto conmigo?</h3>
+        <input type="text" placeholder="Nombre" id="name">
+        <input type="email" placeholder="Email" id="email">
+      </div>
+      <textarea name="comment" rows="5">Mensaje</textarea>
+      <button>Enviar</button>
+    </form>
+    <img src="./images/mail.png" alt="">
+  </section>
+
+  <footer>
+    <div class="social">
+      <a target="_blank" href="https://github.com/vmoratog" class="social-link github"></a>
+      <a target="_blank" href="https://www.linkedin.com/in/vmoratog/" class="social-link linkedin"></a>
+      <a target="_blank" href="https://twitter.com/valentinamorato" class="social-link twitter"></a>
+      <a target="_blank" href="https://www.facebook.com/valentina.morattogarces" class="social-link facebook"></a>
+      <a target="_blank" href="https://www.instagram.com/vmoratog/" class="social-link instagram"></a>
+    </div>
+  </footer>
+
+  <script>
+    const tablet = window.matchMedia('screen and (max-width: 810px)');
+    const menu = document.querySelector('.menu');
+    const burgerButton = document.querySelector('#burger-menu');
+
+    tablet.addListener(validation);
+    validation(tablet);
+    function validation(event) {
+      if (event.matches) {
+        burgerButton.addEventListener('touchstart', toggleMenu) /*para mobile*/
+        burgerButton.addEventListener('mouseenter', showMenu) /*para resto de pantallas*/
+        menu.addEventListener('mouseleave', hideMenu)
+      } else {
+        burgerButton.removeEventListener('touchstart', toggleMenu)
+        burgerButton.removeEventListener('mouseenter', showMenu)
+        menu.removeEventListener('mouseleave', hideMenu)
+      }
+    }
+
+    function toggleMenu() {
+      hideShow(!menu.classList.contains('is-active'))
+    }
+    function showMenu() { hideShow(true) }
+    function hideMenu() { hideShow(false) }
+
+    function hideShow(show) {
+      if (!show) {
+        menu.classList.remove('is-active');
+      } else {
+        menu.classList.add('is-active');
+      }
+    }
+  </script>
+</body>
+
+</html>

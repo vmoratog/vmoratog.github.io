@@ -1,0 +1,430 @@
+body {
+  background-color: thistle;
+  margin: 0;
+  position: relative;
+  min-height: 100vh;
+}
+
+header {
+  background-color: #423042;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  padding: 0 2em;
+  margin-bottom: 2em;
+  height: 5em;
+  width: 100%;
+}
+
+header nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header nav ol {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+header nav ol li {
+  list-style: none;
+  margin-right: 2em;
+}
+
+header nav ol li a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.5em;
+  font-family: 'Poppins', sans-serif;
+}
+
+footer {
+  background-color: #423042;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0 2em;
+  height: 5em;
+  width: 100%;
+}
+
+.header-section {
+  background-color: white;
+  border-radius: 0.5em;
+  display: block;
+}
+
+.header-section .title-section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 2em;
+}
+
+.header-section .description {
+  background-color: #EDE1ED;
+  border-radius: 0.4em;
+  margin: 0 8em;
+  padding: 1em;
+  font-family: 'Poppins', sans-serif;
+}
+
+.header-section h1, .header-section h2 {
+  text-align: end;
+  font-family: "Poiret One";
+  color: #916891;
+}
+
+.header-section h1 {
+  font-size: 2em;
+}
+
+.header-section h2 {
+  font-size: 1.2em;
+}
+
+.header-section img {
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+section {
+  background-color: white;
+  border-radius: 0.5em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  max-width: 70%;
+  margin: 0 auto;
+  padding: 1.5em;
+  margin-bottom: 1em;
+}
+
+.experience {
+  display: block;
+}
+
+.experience .item-article {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 2em;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.experience article {
+  width: 40%;
+  border-radius: 1em;
+  border: 1px solid #916891;
+  margin: 0 5%;
+}
+
+.experience article h2 {
+  border-top-left-radius: inherit;
+  border-top-right-radius: inherit;
+  font-family: "Poiret One";
+  color: white;
+  background-color: #916891;
+  margin: 0;
+  padding: 1em;
+}
+
+.experience article p {
+  padding: 1em;
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+}
+
+.experience .resume {
+  text-align: center;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  padding: 1em;
+  margin: 0 auto;
+}
+
+.experience .resume div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.experience .resume p {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+}
+
+.experience .resume a {
+  font-family: 'Poppins', sans-serif;
+  text-decoration: none;
+  background-color: #916891;
+  color: white;
+  padding: 0.5em;
+  border-radius: 0.3em;
+  margin-top: 1em;
+  width: 5em;
+}
+
+.contact {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.contact img {
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+
+.contact .form-email {
+  margin-left: 4em;
+}
+
+.contact .form-email h3 {
+  color: #916891;
+  font-family: "Poiret One";
+  font-size: 2em;
+}
+
+.contact textarea {
+  display: block;
+  margin: 1em 0;
+  width: 100%;
+  font-family: 'Poppins', sans-serif;
+}
+
+.contact input {
+  font-family: 'Poppins', sans-serif;
+}
+
+.contact button {
+  width: 30%;
+  background-color: #916891;
+  color: white;
+  font-weight: bold;
+}
+
+.contact .img-mail {
+  width: 200px;
+  height: 200px;
+}
+
+.social {
+  margin: 0 auto;
+}
+
+.social .social-link {
+  width: 40px;
+  height: 40px;
+  display: inline-block;
+  margin: 0 10px;
+}
+
+.social .social-link.twitter {
+  background-image: url("./images/twitter.png");
+  background-size: 40px 40px;
+}
+
+.social .social-link.facebook {
+  background-image: url("./images/facebook.png");
+  background-size: 40px 40px;
+}
+
+.social .social-link.github {
+  background-image: url("./images/github.png");
+  background-size: 40px 40px;
+}
+
+.social .social-link.instagram {
+  background-image: url("./images/instagram.png");
+  background-size: 40px 40px;
+}
+
+.social .social-link.linkedin {
+  background-image: url("./images/linkedin.png");
+  background-size: 40px 40px;
+}
+
+@font-face {
+  font-family: 'icomoon';
+  src: url("fonts/icomoon.eot?v43n9o");
+  src: url("fonts/icomoon.eot?v43n9o#iefix") format("embedded-opentype"), url("fonts/icomoon.ttf?v43n9o") format("truetype"), url("fonts/icomoon.woff?v43n9o") format("woff"), url("fonts/icomoon.svg?v43n9o#icomoon") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-menu:before {
+  content: "\e900";
+}
+
+.burger-button {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  /*es como si dijera 20 px, el 50% de 40 px y ademas da un circulo*/
+  display: none;
+  line-height: 40px;
+  text-align: center;
+  position: fixed;
+  z-index: 4;
+  left: 5px;
+  top: 5px;
+  color: white;
+  font-size: 25px;
+}
+
+@media screen and (max-width: 1023px) {
+  header {
+    display: block;
+    height: inherit;
+  }
+  header header ol {
+    display: block;
+  }
+  header header ol header ol li {
+    height: 50px;
+  }
+  header header ol header ol li header a {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .header-section {
+    margin-top: 4em;
+  }
+  .description {
+    margin: 0 1em !important;
+  }
+  .item-article {
+    display: block !important;
+  }
+  .item-article article {
+    width: auto;
+    margin: 1em;
+  }
+  .contact {
+    display: block;
+  }
+  .contact img {
+    display: block;
+    margin: 0 auto;
+  }
+  .contact h3 {
+    text-align: end;
+  }
+  .form-email {
+    margin: 2em;
+  }
+}
+
+@media screen and (max-width: 810px) {
+  .burger-button {
+    display: block;
+    margin-top: 0.5em;
+  }
+  .menu {
+    position: fixed;
+    background: rgba(145, 104, 145, 0.8);
+    z-index: 3;
+    top: 0;
+    left: -100vw;
+    width: 100vw;
+    height: inherit;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+  }
+  .menu.is-active {
+    left: 0;
+  }
+}
+
+@media screen and (max-width: 667px) {
+  body {
+    background-color: white;
+  }
+  .burger-button {
+    color: #916891;
+  }
+  .header-section {
+    padding: 0;
+    max-width: 90%;
+  }
+  .title-section {
+    display: block !important;
+  }
+  .title-section img {
+    display: block;
+    margin: 0 auto;
+  }
+  .title-section h1, .title-section h2 {
+    text-align: center;
+  }
+  .experience, .contact {
+    padding: 0;
+    max-width: 100%;
+  }
+  .form-email input {
+    margin: 0.5em 0;
+  }
+  .form-email h3 {
+    font-size: 1.5em;
+    text-align: center;
+  }
+}
+/*# sourceMappingURL=index.css.map */
