@@ -17,8 +17,10 @@
   <link rel="mask-icon" href="imagenes/safari-pinned-tab.svg" color="#5bbad5">
   <meta name="msapplication-TileColor" content="#da532c">
   <meta name="theme-color" content="#ffffff">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/4.5.6/css/ionicons.min.css" />
 
   <link rel="stylesheet" href="./index.css">
+  <link rel="stylesheet" href="./carousel.css">
 </head>
 
 <body>
@@ -33,7 +35,7 @@
           <a href="#experience">Experiencia.</a>
         </li>
         <li>
-          <a href="./portafolio/index.html">Portafolio.</a>
+          <a href="#interests">Intereses / Hobbies.</a>
         </li>
         <li>
           <a href="#contacto">Contáctame.</a>
@@ -103,6 +105,88 @@
     </div>
   </section>
 
+  <section class="interests" id="interests">
+    <article class="carousel flex-container">
+
+      <div class="flex-container carousel-container">
+        <div class="row">
+          <animatable-component autoplay animation="slideInLeft" duration="800"
+            class="col row align-items-center justify-center">
+            <a class="left" hre>
+              <ion-icon name="chevron-back-outline"></ion-icon>
+            </a>
+          </animatable-component>
+          <div class="col">
+            <animatable-component autoplay class='myCarousel align-items-center'>
+              <div class="row">
+                <div class="col">
+                  <div class="item">
+                    <img src="./images/carousel/animals.png">
+                    <span class="label-carousel">Animales</span>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="item">
+                    <img src="./images/carousel/chocolate.png">
+                    <span class="label-carousel">Chocolate</span>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="item">
+                    <img src="/images/carousel/cooking.png">
+                    <span class="label-carousel">Cocinar / Recetas</span>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="item">
+                    <img src="/images/carousel/investigation.svg">
+                    <span class="label-carousel">Investigar / Estudiar</span>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="item align-items-center">
+                    <img src="/images/carousel/landscape.jpg">
+                    <span class="label-carousel">Paisajes</span>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="item">
+                    <img src="/images/carousel/learn.svg">
+                    <span class="label-carousel">Aprender / Conocer Idiomas / Culturas</span>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="item">
+                    <img src="/images/carousel/skydiving.jpg">
+                    <span class="label-carousel">Deportes / Alturas</span>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="item">
+                    <img src="/images/carousel/travel.png">
+                    <span class="label-carousel">Viajar</span>
+                  </div>
+                </div>
+              </div>
+            </animatable-component>
+          </div>
+          <animatable-component autoplay animation="slideInRight" duration="800"
+            class="col row align-items-center justify-center">
+            <a class="right" href="javascript:void(0)">
+              <ion-icon name="chevron-forward-outline"></ion-icon>
+            </a>
+          </animatable-component>
+        </div>
+        <div class="row row-label">
+          <div class="col label-item">
+            <span> Hola</span>
+          </div>
+        </div>
+      </div>
+
+    </article>
+  </section>
+
   <section class="contact" id="contacto">
     <img class="img-mail" src="./images/correo.png" alt="">
     <form class="form-email">
@@ -111,8 +195,18 @@
         <input type="text" placeholder="Nombre" id="name">
         <input type="email" placeholder="Email" id="email">
       </div>
-      <textarea name="comment" rows="5">Mensaje</textarea>
-      <button>Enviar</button>
+      <textarea name="comment" rows="5" id="message" placeholder="Mensaje"></textarea>
+
+      <button type="button" class="btn-send">
+        <p>Enviar</p>
+        <svg class="svg-send" version="1.1" xmlns="http://www.w3.org/2000/svg"
+          xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+          viewBox="0 0 512 512" enable-background="new 0 0 512 512" xml:space="preserve">
+          <path id="paper-plane-icon" d="M462,54.955L355.371,437.187l-135.92-128.842L353.388,167l-179.53,124.074L50,260.973L462,54.955z
+      M202.992,332.528v124.517l58.738-67.927L202.992,332.528z"></path>
+        </svg>
+      </button>
+
     </form>
     <img src="./images/mail.png" alt="">
   </section>
@@ -127,39 +221,15 @@
     </div>
   </footer>
 
-  <script>
-    const tablet = window.matchMedia('screen and (max-width: 810px)');
-    const menu = document.querySelector('.menu');
-    const burgerButton = document.querySelector('#burger-menu');
+  <script src="https://unpkg.com/ionicons@5.1.2/dist/ionicons.js"></script>
 
-    tablet.addListener(validation);
-    validation(tablet);
-    function validation(event) {
-      if (event.matches) {
-        burgerButton.addEventListener('touchstart', toggleMenu) /*para mobile*/
-        burgerButton.addEventListener('mouseenter', showMenu) /*para resto de pantallas*/
-        menu.addEventListener('mouseleave', hideMenu)
-      } else {
-        burgerButton.removeEventListener('touchstart', toggleMenu)
-        burgerButton.removeEventListener('mouseenter', showMenu)
-        menu.removeEventListener('mouseleave', hideMenu)
-      }
-    }
+  <script type="module"
+    src="https://unpkg.com/@proyecto26/animatable-component@1.1.8/dist/animatable-component/animatable-component.esm.js"></script>
+  <script nomodule
+    src="https://unpkg.com/@proyecto26/animatable-component@1.1.8/dist/animatable-component/animatable-component.js"></script>
 
-    function toggleMenu() {
-      hideShow(!menu.classList.contains('is-active'))
-    }
-    function showMenu() { hideShow(true) }
-    function hideMenu() { hideShow(false) }
-
-    function hideShow(show) {
-      if (!show) {
-        menu.classList.remove('is-active');
-      } else {
-        menu.classList.add('is-active');
-      }
-    }
-  </script>
+  <script src="carousel.js"></script>
+  <script src="/index.js"></script>
 </body>
 
 </html>

@@ -2,10 +2,14 @@ body {
   background-color: thistle;
   margin: 0;
   position: relative;
-  min-height: 100vh;
+  height: 100%;
+  width: 100%;
+  overflow-x: hidden;
+  padding-bottom: calc(5em + 20px);
 }
 
 header {
+  position: relative;
   background-color: #423042;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -13,7 +17,6 @@ header {
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
-  padding: 0 2em;
   margin-bottom: 2em;
   height: 5em;
   width: 100%;
@@ -26,6 +29,8 @@ header nav {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  position: absolute;
+  right: 0px;
 }
 
 header nav ol {
@@ -59,6 +64,8 @@ footer {
           align-items: center;
   padding: 0 2em;
   height: 5em;
+  position: absolute;
+  bottom: 0;
   width: 100%;
 }
 
@@ -121,6 +128,10 @@ section {
   margin: 0 auto;
   padding: 1.5em;
   margin-bottom: 1em;
+}
+
+.contact {
+  margin-bottom: 0;
 }
 
 .experience {
@@ -201,6 +212,7 @@ section {
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
+  padding-bottom: 6em;
 }
 
 .contact img {
@@ -231,15 +243,98 @@ section {
 }
 
 .contact button {
-  width: 30%;
+  width: 25%;
   background-color: #916891;
   color: white;
   font-weight: bold;
+  font-family: 'Poppins', sans-serif;
+  border-radius: 0.3em;
+  height: 2em;
+  border: 2px solid #916891;
+  position: relative;
 }
 
 .contact .img-mail {
   width: 200px;
   height: 200px;
+}
+
+* {
+  -webkit-transition: all .15s;
+  transition: all .15s;
+  outline: none;
+}
+
+.btn-send {
+  cursor: pointer;
+}
+
+.btn-send p {
+  margin: 0;
+}
+
+.btn-send:hover {
+  background-color: thistle;
+  border: 2px solid thistle;
+}
+
+.btn-send:hover svg {
+  -webkit-transform: rotate(10deg);
+          transform: rotate(10deg);
+  -webkit-transition: -webkit-transform .15s;
+  transition: -webkit-transform .15s;
+  transition: transform .15s;
+  transition: transform .15s, -webkit-transform .15s;
+}
+
+.btn-send .svg-send {
+  position: absolute;
+  top: 4px;
+  right: 4px;
+  height: 16px;
+  width: auto;
+  -webkit-transition: -webkit-transform .15s;
+  transition: -webkit-transform .15s;
+  transition: transform .15s;
+  transition: transform .15s, -webkit-transform .15s;
+}
+
+.btn-send .svg-send path {
+  fill: white;
+}
+
+.btn-send.clicked {
+  background-color: thistle;
+  border: 0;
+  color: white;
+  padding-right: 6px;
+  -webkit-animation: bounce-in .3s;
+          animation: bounce-in .3s;
+  cursor: default;
+}
+
+.btn-send.clicked svg {
+  -webkit-animation: flyaway 1.3s linear;
+          animation: flyaway 1.3s linear;
+  top: -80px;
+  right: -1000px;
+  color: #916891;
+}
+
+.btn-send.clicked svg path {
+  fill: #916891;
+}
+
+.bubble {
+  background-color: rgba(252, 244, 244, 0.897);
+  border-radius: 50%;
+  width: 25px;
+  height: 25px;
+  position: fixed;
+  z-index: -1;
+  bottom: 0;
+  display: block;
+  opacity: 0;
 }
 
 .social {
@@ -364,7 +459,7 @@ section {
   }
 }
 
-@media screen and (max-width: 810px) {
+@media screen and (max-width: 1023px) {
   .burger-button {
     display: block;
     margin-top: 0.5em;
@@ -391,6 +486,12 @@ section {
   }
   .menu.is-active {
     left: 0;
+  }
+  .menu.is-active ol {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
 }
 
@@ -425,6 +526,114 @@ section {
   .form-email h3 {
     font-size: 1.5em;
     text-align: center;
+  }
+}
+
+@-webkit-keyframes flyaway {
+  0% {
+    -webkit-transform: rotate(10deg);
+            transform: rotate(10deg);
+    top: 13px;
+    right: 25px;
+    height: 30px;
+  }
+  5% {
+    -webkit-transform: rotate(10deg);
+            transform: rotate(10deg);
+    top: 13px;
+    right: 0px;
+    height: 30px;
+  }
+  20% {
+    -webkit-transform: rotate(-20deg);
+            transform: rotate(-20deg);
+    top: 13px;
+    right: -130px;
+    height: 45px;
+  }
+  40% {
+    -webkit-transform: rotate(10deg);
+            transform: rotate(10deg);
+    top: -40px;
+    right: -280px;
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: rotate(60deg);
+            transform: rotate(60deg);
+    top: -200px;
+    right: -1000px;
+    height: 0;
+    opacity: 0;
+  }
+}
+
+@keyframes flyaway {
+  0% {
+    -webkit-transform: rotate(10deg);
+            transform: rotate(10deg);
+    top: 13px;
+    right: 25px;
+    height: 30px;
+  }
+  5% {
+    -webkit-transform: rotate(10deg);
+            transform: rotate(10deg);
+    top: 13px;
+    right: 0px;
+    height: 30px;
+  }
+  20% {
+    -webkit-transform: rotate(-20deg);
+            transform: rotate(-20deg);
+    top: 13px;
+    right: -130px;
+    height: 45px;
+  }
+  40% {
+    -webkit-transform: rotate(10deg);
+            transform: rotate(10deg);
+    top: -40px;
+    right: -280px;
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: rotate(60deg);
+            transform: rotate(60deg);
+    top: -200px;
+    right: -1000px;
+    height: 0;
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes bounce-in {
+  0% {
+    padding-right: 30px;
+  }
+  40% {
+    padding-right: 6px;
+  }
+  50% {
+    padding-left: 30px;
+  }
+  100% {
+    padding-left: 6px;
+  }
+}
+
+@keyframes bounce-in {
+  0% {
+    padding-right: 30px;
+  }
+  40% {
+    padding-right: 6px;
+  }
+  50% {
+    padding-left: 30px;
+  }
+  100% {
+    padding-left: 6px;
   }
 }
 /*# sourceMappingURL=index.css.map */

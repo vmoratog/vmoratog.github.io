@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Valentina Morato Garcés</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poiret+One&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,700;1,200;1,300;1,400;1,700&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="./index.css">
+</head>
+
+<body>
+  <div class="frame">
+    <div class="plane-container">
+      <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+        width="1131.53px" height="379.304px" viewBox="0 0 1131.53 379.304" enable-background="new 0 0 1131.53 379.304"
+        xml:space="preserve" class="plane">
+        <polygon fill="#D8D8D8"
+          points="72.008,0 274.113,140.173 274.113,301.804 390.796,221.102 601.682,367.302 1131.53,0.223  " />
+        <polygon fill="#C4C4C3" points="1131.53,0.223 274.113,140.173 274.113,301.804 390.796,221.102   " />
+      </svg>
+    </div>
+  </div>
+
+  <div class="wrapper">
+    <div class="textos">
+      <div>
+        <h2 class="titulo" id="texto">GRACIAS POR ESCRIBIRNOS</h2>
+        <p class="mensaje" id="texto2">Tu mensaje ha sido enviado con éxito. Nos comunicaremos contigo en
+          breve.</p>
+        <span> <a id="texto3" href="/">Regresar.</a></span>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="mascara">
+        <!-- nubes -->
+        <div class="nube">
+          <div class="nube nube2"></div>
+        </div>
+        <!-- fin nubes -->
+        <!-- circulos fondo -->
+        <div class="circulos">
+          <div class="circulo1"></div>
+          <div class="circulo2"></div>
+          <div class="circulo3"></div>
+        </div>
+        <!-- fin circulos fondo -->
+
+        <div class="anim-office">
+          <img src="vectores/imageedit_2_6786491647.png" alt="">
+        </div>
+
+        <!-- cuadrados -->
+        <div class="cuadrados">
+          <div class="cuadrado1" id="mostrarMensaje"></div>
+          <div class="cuadrado2"></div>
+          <div class="cuadrado3"></div>
+          <div class="cuadrado4"></div>
+          <div class="cuadrado5"></div>
+          <div class="cuadrado6"></div>
+          <div class="cuadrado7"></div>
+          <div class="cuadrado8"></div>
+          <div class="cuadrado9"></div>
+          <div class="cuadrado10"></div>
+          <div class="cuadrado11"></div>
+          <div class="cuadrado12"></div>
+          <div class="cuadrado13"></div>
+          <div class="cuadrado14"></div>
+        </div>
+        <!-- fin cuadrados -->
+        <!-- fichas -->
+        <div class="fichas">
+          <div class="ficha1">
+            <div class="barra"></div>
+          </div>
+          <div class="ficha2">
+            <div class="barra"></div>
+          </div>
+          <div class="ficha3">
+            <div class="barra"></div>
+          </div>
+          <div class="ficha4">
+            <div class="barra"></div>
+          </div>
+          <div class="ficha5">
+            <div class="barra"></div>
+          </div>
+          <div class="ficha6">
+            <div class="barra"></div>
+          </div>
+          <div class="ficha7">
+            <div class="barra"></div>
+          </div>
+          <div class="ficha8">
+            <div class="barra"></div>
+          </div>
+        </div>
+        <!-- fin fichas -->
+        <div class="wifi">
+          <img src="vectores/wifi-ico.svg" alt="">
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <script type="module"
+    src="https://unpkg.com/@proyecto26/animatable-component@1.1.8/dist/animatable-component/animatable-component.esm.js"></script>
+  <script nomodule
+    src="https://unpkg.com/@proyecto26/animatable-component@1.1.8/dist/animatable-component/animatable-component.js"></script>
+  <animatable-component
+    autoplay
+    class='movement'
+    iterations="Infinity"
+    easing="linear"
+    duration="8000">
+    <animatable-component
+      autoplay
+      class='walking'
+      iterations="Infinity"
+      easing="steps(4)"
+      duration="600">
+      <div class="cat"></div>
+    </animatable-component>
+  </animatable-component>
+
+  <script>
+    const $mensaje = document.getElementById("mostrarMensaje");
+    const $textos = document.getElementById("texto")
+    const $textos2 = document.getElementById("texto2")
+    const $textos3 = document.getElementById("texto3")
+    $mensaje.addEventListener("animationend", (event) => {
+      console.log(event);
+      $textos.style.animationName = "gracias";
+      $textos.style.animationDuration = "2s";
+      $textos.style.animationFillMode = "forwards";
+
+      $textos2.style.animationName = "gracias";
+      $textos2.style.animationDuration = "2s";
+      $textos2.style.animationFillMode = "forwards";
+      $textos2.style.animationDelay = "0.5s";
+
+      $textos3.style.animationName = "gracias";
+      $textos3.style.animationDuration = "2s";
+      $textos3.style.animationFillMode = "forwards";
+      $textos3.style.animationDelay = "1s";
+    });
+
+    /**
+ * <animatable/> WebComponent => https://github.com/proyecto26/animatable-component
+ */
+
+    const walking = document.querySelector('.walking');
+
+    walking.keyFrames = [
+      { offset: 0, backgroundPosition: '0' },
+      { offset: 1, backgroundPosition: '-1023px' }
+    ]
+
+    const movement = document.querySelector('.movement');
+
+    movement.keyFrames = [
+      { offset: 0, transform: 'translateX(-50%)' },
+      { offset: 1, transform: 'translateX(150%)' }
+    ]
+  </script>
+</body>
+
+</html>
