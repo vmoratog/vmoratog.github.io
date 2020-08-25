@@ -95,6 +95,6 @@ buttonSend.addEventListener('click', function () {
     window.location = './contactAnimation'
   }).catch(function (err) {
     buttonSend.classList.remove('clicked')
-    debugger
+
   })
 })
